@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/calligra
+# catalog-date 2010-05-03 23:11:16 +0200
+# catalog-license other-free
+# catalog-version undef
 Name:		texlive-calligra
 Version:	20100503
 Release:	1
@@ -42,6 +48,7 @@ fundus bundle.
 %{_texmfdistdir}/fonts/tfm/public/calligra/callig15.tfm
 %doc %{_texmfdistdir}/doc/latex/calligra/README
 %doc %{_texmfdistdir}/doc/latex/calligra/testfont.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -52,3 +59,5 @@ fundus bundle.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
