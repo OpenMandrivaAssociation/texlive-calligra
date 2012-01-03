@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-calligra
 Version:	20100503
-Release:	1
+Release:	2
 Summary:	Calligraphic font
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/calligra
