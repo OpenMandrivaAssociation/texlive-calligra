@@ -5,7 +5,7 @@
 # catalog-license other-free
 # catalog-version undef
 Name:		texlive-calligra
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Calligraphic font
 Group:		Publishing
