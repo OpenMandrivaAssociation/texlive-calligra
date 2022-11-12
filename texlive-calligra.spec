@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /fonts/calligra
-# catalog-date 2010-05-03 23:11:16 +0200
-# catalog-license other-free
-# catalog-version undef
 Name:		texlive-calligra
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Calligraphic font
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/calligra
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calligra.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calligra.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calligra.r15878.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calligra.doc.r15878.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ support of the font is provided in the calligra package in the
 fundus bundle.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,25 +36,10 @@ fundus bundle.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100503-2
-+ Revision: 749951
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100503-1
-+ Revision: 717995
-- texlive-calligra
-- texlive-calligra
-- texlive-calligra
-- texlive-calligra
-- texlive-calligra
-
