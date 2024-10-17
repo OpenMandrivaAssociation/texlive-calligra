@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Calligraphic font
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/calligra
+URL:		https://www.ctan.org/tex-archive/fonts/calligra
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calligra.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calligra.doc.r%{version}.tar.xz
